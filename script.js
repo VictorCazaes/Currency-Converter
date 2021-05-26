@@ -14,6 +14,7 @@ const StoregedCurrencies = {
     },
     set(currencies) {
         localStorage.setItem("Currencies", JSON.stringify(currencies));
+        location.reload();
     }
 };
 
