@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="center">
+        <h1>Currency Converter</h1>
+    </header>
+    <main class="center">
+        <form action="submit">
+            <div id="amount" class="display-boxes">
+                <label for="input-amount">Amount:</label>
+                <input id="input-amount" class="currency-box" type="number" value="1.00">
+            </div>
+            <div id="from-box" class="display-boxes">
+                <label for="currencies-from">From:</label>
+                <select id="currencies-from" name="currencies-from" class="currency-box" required>
+                    <option value="" disabled selected hidden> -- Select a currency -- </option>
+                </select>
+            </div>
+            <div id="to-box" class="display-boxes">
+                <label for="currencies-to">To:</label>
+                <select id="currencies-to" name="currencies-to" class="currency-box" required>
+                    <option value="" disabled selected hidden> -- Select a currency -- </option>
+                </select>
+            </div>
+            <div class="center">
+                <button type="submit">Convert </button>
+            </div>
+        </form>
+        <div id="display-result">Result</div>
+    </main>
+    <footer class="center">
+        <a target="_blank" href="https://github.com/VictorCazaes/Currency-Converter/"> <img
+                src="./src/images/github.png" alt="github"></a>
+        <span>
+            A Currency Converter using Javascript, HTML and CSS
+        </span>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
