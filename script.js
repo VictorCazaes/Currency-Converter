@@ -43,8 +43,8 @@ const GetCurrency = {
 };
 
 const DOM = {
-    currencyFrom: document.querySelector("#currencies-from"),
-    currencyTo: document.querySelector("#currencies-to"),
+    currencyFrom: document.querySelector("#currencies-from-list"),
+    currencyTo: document.querySelector("#currencies-to-list"),
     amount: document.querySelector("#input-amount"),
     resultBoard: document.querySelector("#display-result"),
     displayCurrenciesFrom(currency, index) {

@@ -24,15 +24,17 @@
             </div>
             <div id="from-box" class="display-boxes">
                 <label for="currencies-from">From:</label>
-                <select id="currencies-from" name="currencies-from" class="currency-box" required>
-                    <option value="" disabled selected hidden> -- Select a currency -- </option>
-                </select>
+                <input id="currencies-from" list="currencies-from-list" name="currencies-from" class="currency-box"
+                    placeholder="-- Select a currency --" required>
+                <datalist id="currencies-from-list">
+                </datalist>
             </div>
             <div id="to-box" class="display-boxes">
                 <label for="currencies-to">To:</label>
-                <select id="currencies-to" name="currencies-to" class="currency-box" required>
-                    <option value="" disabled selected hidden> -- Select a currency -- </option>
-                </select>
+                <input id="currencies-to" list="currencies-to-list" name="currencies-to" class="currency-box"
+                    placeholder="-- Select a currency --" required>
+                <datalist id="currencies-to-list">
+                </datalist>
             </div>
             <div class="center">
                 <button type="submit">Convert </button>
