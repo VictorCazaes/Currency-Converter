@@ -63,7 +63,9 @@ const DOM = {
     },
     displayResult(from, to, value) {
         value = (value * DOM.amount.value).toFixed(2);
-        DOM.resultBoard.innerHTML = `${DOM.amount.value} ${from} = ${value} ${to}`
+        const displayFrom = Utils.formatCurrency(DOM.amount.value, from);
+        const displayTo = Utils.formatCurrency(value, to);
+        DOM.resultBoard.innerHTML = `${displayFrom} = ${displayTo}`
     }
 };
 
@@ -76,6 +78,9 @@ const Utils = {
             .then((data) => {
                 StoregedCurrencies.set(Object.values(data.results))
             })
+    },
+    formatCurrency(amount, locale) {
+        return parseFloat(amount).toLocaleString("en", { style: 'currency', currency: `${locale}` });
     }
 };
 
